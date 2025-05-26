@@ -25,6 +25,30 @@ Key features:
 
 [View MySQL Setup Details](mysql-docker/README.md)
 
+### Kafka
+A local Kafka instance using Docker. Located in the `kafka-docker` directory.
+
+Key features:
+- Kafka 7.5.3 (Confluent Platform)
+- Zookeeper 7.5.3
+- Single broker setup
+- Data persistence using Docker volumes
+- Exposed on ports 9092 (Kafka) and 2181 (Zookeeper)
+
+[View Kafka Setup Details](kafka-docker/README.md)
+
+### Elasticsearch
+A local Elasticsearch instance using Docker. Located in the `elasticsearch-docker` directory.
+
+Key features:
+- Elasticsearch 8.12.1
+- Single node setup
+- Data persistence using Docker volumes
+- Memory limit set to 512MB
+- Exposed on port 9200
+
+[View Elasticsearch Setup Details](elasticsearch-docker/README.md)
+
 ## Prerequisites
 
 - Docker
@@ -50,12 +74,16 @@ Each service has its own directory with specific instructions. Navigate to the s
 
 ### Quick Start
 
-1. Choose a service (Redis or MySQL)
+1. Choose a service (Redis, MySQL, Kafka, or Elasticsearch)
 2. Navigate to its directory:
    ```bash
-   cd redis-docker    # for Redis
+   cd redis-docker     # for Redis
    # or
-   cd mysql-docker    # for MySQL
+   cd mysql-docker     # for MySQL
+   # or
+   cd kafka-docker     # for Kafka
+   # or
+   cd elasticsearch-docker  # for Elasticsearch
    ```
 3. Start the service:
    ```bash
